@@ -1,3 +1,5 @@
+## Global Color
+
 ```
 import EStyleSheet from 'react-native-extended-stylesheet';
 
@@ -15,4 +17,13 @@ export default EStyleSheet.create({
      backgroundColor: '$primaryBlue',
   },
 });
+```
+
+## Dynamic style
+```
+  const containerStyles = [styles.container];
+  
+  if (editable === false) {
+    containerStyles.push(styles.containerDisabled);
+  }
 ```

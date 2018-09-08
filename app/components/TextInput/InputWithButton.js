@@ -16,7 +16,7 @@ const InputWithButton = ({
   const underlayColor = color(styles.$buttonBackgroundColorBase).darken(
     styles.$buttonBackgroundColorModifier,
   );
-
+  // put styles.container into array. component can accept style array
   const containerStyles = [styles.container];
   if (editable === false) {
     containerStyles.push(styles.containerDisabled);
