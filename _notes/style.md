@@ -20,9 +20,10 @@ export default EStyleSheet.create({
 ```
 
 ## Dynamic style
+Component can accept style array. The idea is pushing style into array.
 ```
   const containerStyles = [styles.container];
-  
+
   if (editable === false) {
     containerStyles.push(styles.containerDisabled);
   }
