@@ -22,15 +22,18 @@ class Home extends Component {
   };
 
   handlePressBaseCurrency = () => {
-    console.log('press base currency');
+    const { navigation } = this.props;
+    navigation.navigate('CurrencyList', { title: 'Base Currency' });
   };
 
   handlePressQuoteCurrency = () => {
-    console.log('press quote currency');
+    const { navigation } = this.props;
+    navigation.navigate('CurrencyList', { title: 'Quote Currency' });
   };
 
   handleOptionsPress = () => {
-    console.log('options press');
+    const { navigation } = this.props;
+    navigation.navigate('Options');
   };
 
   render() {
