@@ -27,7 +27,7 @@ EStyleSheet.build({
 export default () => (
   <Provider store={store}>
     <AlertProvider>
-      <Navigator onNavigationStateChange={null} /> {/* Disable nav log*/}
+      <Navigator onNavigationStateChange={null} />
     </AlertProvider>
   </Provider>
 );
