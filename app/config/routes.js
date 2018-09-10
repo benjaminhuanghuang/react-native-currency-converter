@@ -33,6 +33,8 @@ const HomeStack = createStackNavigator(
   },
 );
 
+// The root navigator donot render the header (headerMode: 'none')
+// But we want the currency list has hader
 const CurrencyListStack = createStackNavigator({
   CurrencyList: {
     screen: CurrencyList,
