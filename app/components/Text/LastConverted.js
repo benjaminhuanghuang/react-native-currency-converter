@@ -8,22 +8,22 @@ import styles from './styles';
 const LastConverted = ({
   date, base, quote, conversionRate,
 }) => (
-    <Text style={styles.smallText}>
+  <Text style={styles.smallText}>
       1
     {' '}
-      {base}
-      {' '}
+    {base}
+    {' '}
       =
     {' '}
-      {conversionRate}
-      {' '}
-      {quote}
-      {' '}
+    {conversionRate}
+    {' '}
+    {quote}
+    {' '}
       as of
     {' '}
-      {moment(date).format('MMMM D, YYYY')}
-    </Text>
-  );
+    {moment(date).format('MMMM D, YYYY')}
+  </Text>
+);
 
 LastConverted.propTypes = {
   date: PropTypes.object,

@@ -23,7 +23,7 @@ EStyleSheet.build({
   $inputText: '#797979',
   $darkText: '#343434',
 });
-
+// onNavigationStateChange={null}  will disable the log about navigation
 export default () => (
   <Provider store={store}>
     <AlertProvider>

@@ -25,6 +25,7 @@ class Home extends Component {
   static propTypes = {
     navigation: PropTypes.object,
     dispatch: PropTypes.func,
+
     baseCurrency: PropTypes.string,
     quoteCurrency: PropTypes.string,
     amount: PropTypes.number,
@@ -33,7 +34,7 @@ class Home extends Component {
     isFetching: PropTypes.bool,
   };
 
-  handleChangeText = () => {
+  handleChangeText = (text) => {
     // TODO: Dispatch this action to redux
     const { dispatch } = this.props;
     dispatch(changeCurrencyAmount(text));
@@ -107,7 +108,7 @@ class Home extends Component {
     );
   }
 }
-
+// Read data from store
 const mapStateToProps = (state) => {
   const { baseCurrency, quoteCurrency } = state.currencies;
   const conversionSelector = state.currencies.conversions[baseCurrency] || {};

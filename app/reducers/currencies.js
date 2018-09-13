@@ -1,5 +1,12 @@
 import { CHANGE_CURRENCY_AMOUNT, SWAP_CURRENCY } from '../actions/currencies';
 
+// const initialState = {
+//   baseCurrency: 'USD',
+//   quoteCurrency: 'GBP',
+//   amount: 100,
+//   conversions: {},
+// };
+
 const initialState = {
   baseCurrency: 'USD',
   quoteCurrency: 'GBP',
