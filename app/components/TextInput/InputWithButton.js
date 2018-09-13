@@ -11,6 +11,7 @@ const InputWithButton = ({
   editable,
   onPress,
   buttonText,
+  textColor,
   ...props
 }) => {
   const underlayColor = color(styles.$buttonBackgroundColorBase).darken(
@@ -21,6 +22,10 @@ const InputWithButton = ({
   if (editable === false) {
     containerStyles.push(styles.containerDisabled);
   }
+  const buttonTextStyles = [styles.buttonText];
+  if (textColor) {
+    buttonTextStyles.push({ color: textColor });
+  }
 
   return (
     <View style={containerStyles}>
@@ -29,7 +34,7 @@ const InputWithButton = ({
         style={styles.buttonContainer}
         underlayColor={underlayColor}
       >
-        <Text style={styles.buttonText}>{buttonText}</Text>
+        <Text style={buttonTextStyles}>{buttonText}</Text>
       </TouchableHighlight>
       <View style={styles.separator} />
       <TextInput style={styles.input} underlineColorAndroid="transparent" {...props} />
@@ -41,6 +46,7 @@ InputWithButton.propTypes = {
   onPress: PropTypes.func,
   buttonText: PropTypes.string,
   editable: PropTypes.bool,
+  textColor: PropTypes.string,
 };
 
 export default InputWithButton;
